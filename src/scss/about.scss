@@ -8,6 +8,7 @@
 	&__container {
 	}
 
+
 	&__heading {
 		margin-top: 48px;
 		margin-bottom: 24px;
@@ -49,7 +50,7 @@
 		width: 100%;
 		height: auto;
 
-		background-color: #F6FBF7;
+		background-color: $superLightGrean;
 		border-radius: 65px;
 
 		@media (max-width: $breakpoint-lg) {
