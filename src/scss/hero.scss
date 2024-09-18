@@ -47,6 +47,7 @@
     }
 
     @media (max-width: $breakpoint-sm) {
+      padding: 0 5px;
       text-align: center;
       .content-hero__title{
         font-size: 36px;
