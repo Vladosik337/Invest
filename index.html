@@ -8,7 +8,33 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="page__hero hero">
+    <header class="page__header header">
+        <nav class="nav__container">
+            <a href="#" class="nav__branding"><img src="public/images/header/logo.svg" alt="logo"></a>
+
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="#" class="nav__link scroll__link">Про нас</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link scroll__link">Переваги</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link scroll__link">Калькулятор прибутку</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__button">Розрахувати прибуток</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section class="page__hero hero">
         <div class="hero__container">
             <div class="hero__content content-hero">
                 <h1 class="content-hero__title">Інвестувати проще, ніж здається!</h1>
@@ -60,8 +86,8 @@
                 <img src="public/images/hero/hero_img.png" alt="Hero Image" class="form-hero__img image">
             </div>
         </div>
-    </div>
-    <div class="page__about about">
+    </section>
+    <section class="page__about about">
         <div class="about__container">
             <h3 class="about__heading">Про нас</h3>
             <div class="about__items">
@@ -94,7 +120,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <footer class="page__footer footer">
         <div class="footer__container">
             <span class="footer__line" style="margin-top: 71px"></span>
@@ -103,15 +129,15 @@
                     <img src="public/images/logo.svg" alt="logo" class="footer__img">
                     logoipsum
                 </a>
-                <ul class="nav__menu">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Про нас</a>
+                <ul class="footer-nav__menu">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Про нас</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Переваги</a>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Переваги</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Калькулятор прибутку</a>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Калькулятор прибутку</a>
                     </li>
                 </ul>
             </nav>
@@ -128,30 +154,3 @@
 <script src="src/js/main.js" type="module"></script>
 </body>
 </html>
-
-
-<!--<header class="header">-->
-<!--  <nav class="nav__container">-->
-<!--    <a href="#" class="nav__branding"><img src="public/images/header/logo.svg" alt="logo"></a>-->
-
-<!--    <ul class="nav__menu">-->
-<!--      <li class="nav__item">-->
-<!--        <a href="#" class="nav__link scroll__link">Про нас</a>-->
-<!--      </li>-->
-<!--      <li class="nav__item">-->
-<!--        <a href="#" class="nav__link scroll__link">Переваги</a>-->
-<!--      </li>-->
-<!--      <li class="nav__item">-->
-<!--        <a href="#" class="nav__link scroll__link">Калькулятор прибутку</a>-->
-<!--      </li>-->
-<!--    </ul>-->
-
-<!--    <a href="#" class="nav__button">Розрахувати прибуток</a>-->
-
-<!--    <div class="hamburger">-->
-<!--      <span class="bar"></span>-->
-<!--      <span class="bar"></span>-->
-<!--      <span class="bar"></span>-->
-<!--    </div>-->
-<!--  </nav>-->
-<!--</header>-->
