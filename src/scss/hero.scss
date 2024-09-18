@@ -177,18 +177,19 @@
     }
   }
 
-  &__item-title {
+  &__item-title, &__item-span {
     margin-bottom: 4px;
 
     font-size: 36px;
     font-family: "Abhaya Libre",serif;
     font-weight: 700;
     line-height: 47 / 36 * 1em;
-
     @media (max-width: $breakpoint-md) {
       font-size: 27px;
     }
   }
+
+
 
   &__item-text {
     font-weight: 400;
