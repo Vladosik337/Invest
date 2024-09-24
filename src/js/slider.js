@@ -4,28 +4,22 @@ let nav = document.querySelectorAll(".advantages__nav-button");
 if (screen.availWidth <= 992) {
     let activeIndex = 0;
 
-
     items.forEach((item, index) => {
         if (item.classList.contains('active')) {
             activeIndex = index;
         }
     });
 
-    nav.forEach((item, index) => {
-        if (item.classList.contains('active')) {
+    nav.forEach((button, index) => {
+        if (button.classList.contains('active')) {
             activeIndex = index;
         }
     });
 
+    items[activeIndex].classList.add('active');
+    nav[activeIndex].classList.add('active');
 
-    if (activeIndex === 0) {
-        activeIndex = 0;
-        items[activeIndex].classList.add('active');
-        nav[activeIndex].classList.add('active');
-    }
-
-
-    setInterval(() => {
+    const switchItem = () => {
         items[activeIndex].classList.remove('active');
         nav[activeIndex].classList.remove('active');
 
@@ -33,5 +27,19 @@ if (screen.availWidth <= 992) {
 
         items[activeIndex].classList.add('active');
         nav[activeIndex].classList.add('active');
-    }, 3000);
+    };
+
+    setInterval(switchItem, 3000);
+
+    nav.forEach((navItem, index) => {
+        navItem.addEventListener('click', () => {
+            items[activeIndex].classList.remove('active');
+            nav[activeIndex].classList.remove('active');
+
+            activeIndex = index;
+
+            items[activeIndex].classList.add('active');
+            nav[activeIndex].classList.add('active');
+        });
+    });
 }
