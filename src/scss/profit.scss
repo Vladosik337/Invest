@@ -1,0 +1,606 @@
+.page {
+	&__profit {
+	}
+}
+
+.profit {
+	&__container {
+		padding: 15px 0 ;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $breakpoint-lg) {
+			flex-direction: column-reverse;
+			gap: 28px;
+		}
+	}
+
+	&__investment {
+		max-width: 466px;
+		max-height: 350px;
+		width: 100vw;
+		height: 100vh;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 44px 30px;
+		gap: 14px;
+
+		border-radius: 42px;
+		color: #FFFFFF;
+		background-color: $darkGrean;
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 338px;
+			max-height: 257px;
+			padding: 24px 33px;
+
+		}
+	}
+
+	&__investment-title {
+		font-family: "SB Sans Text",sans-serif;
+		font-weight: 400;
+		line-height: 16 / 21 * 1em;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 12px;
+		}
+	}
+
+	&__investment-amount {
+		margin-top: 12px;
+		margin-right: 24px;
+
+		font-size: 48px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 48 / 62 * 1em;
+
+		color: #21A038;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 36px;
+		}
+	}
+
+	&__bonus {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		max-width: 378px;
+		width: 100%;
+		max-height: 86px;
+		height: 100vh;
+
+		padding: 22px 23px;
+
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.1);
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 271px;
+			max-height: 62px;
+		}
+
+		&-text {
+			width: 161px;
+			font-family: "SB Sans Text",sans-serif;
+
+			@media (max-width: $breakpoint-sm) {
+				width: 119px;
+				font-size: 12px;
+			}
+		}
+
+		&-amount {
+			font-size: 36px;
+			font-family: "Abhaya Libre",serif;
+			font-weight: 700;
+			line-height: 36 / 40 * 1em;
+
+			color: #21a038;
+
+			@media (max-width: $breakpoint-sm) {
+				font-size: 27px;
+			}
+		}
+	}
+
+
+	&__button {
+		height: 53px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-family: "SB Sans Text",sans-serif;
+
+		background-color: #21a038;
+		border-radius: 10px;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 12px;
+			height: 48px;
+		}
+	}
+
+	&__calculators {
+		max-width: 638px;
+		width: 100vw;
+
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		@media (max-width: $breakpoint-lg) {
+			gap: 24px;
+		}
+
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 344px;
+		}
+	}
+
+	&__calculators-title {
+		text-align: center;
+		margin-bottom: 12px;
+
+		font-size: 36px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 36 / 47 * 1em;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 27px;
+		}
+	}
+
+	&__calculator {
+		max-width: 660px;
+		width: 100%;
+		height: 176px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 9px;
+
+		padding: 35px 66px;
+
+		background-color: $superLightGrean;
+		border-radius: 65px;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 27px;
+		}
+	}
+
+	&__sum {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__label {
+		font-size: 18px;
+		text-align: left;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+
+	&__input-value {
+		color: #21a038;
+		font-size: 18px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+	.investment__input-value{
+		color: #21a038;
+		font-size: 18px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+
+	.profit {
+		padding: 55px 34px;
+		&__input {
+			width: 100%;
+			-webkit-appearance: none; // Removes default browser styles
+			background: transparent;
+			--percent: 0%; // Default value to show the initial track as gray
+
+			// Track styling for WebKit browsers (Chrome, Safari)
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				height: 8px;
+				border-radius: 5px;
+				background: linear-gradient(
+								to right,
+								#21a038 var(--percent),
+								#d3d3d3 var(--percent)
+				); // Green track up to the thumb, light grey beyond
+				box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5); // White shadow around track
+			}
+
+			// Track styling for Firefox
+			&::-moz-range-track {
+				width: 100%;
+				height: 8px;
+				border-radius: 5px;
+				background: linear-gradient(
+								to right,
+								#21a038 var(--percent),
+								#d3d3d3 var(--percent)
+				); // Similar gradient effect for Firefox
+				box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+			}
+
+			// Thumb styling
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 18px;
+				height: 18px;
+				background-color: #21a038; // Green thumb
+				border: 3px solid #ffffff; // White circle around the thumb
+				border-radius: 50%;
+				cursor: pointer;
+				margin-top: -5px; // Centers the thumb vertically on the track
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); // Optional white shadow around the thumb
+				transition: transform 0.2s ease;
+			}
+
+			&::-moz-range-thumb {
+				width: 18px;
+				height: 18px;
+				background-color: #21a038;
+				border: 3px solid #ffffff;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-top: -5px; // Centers the thumb vertically on the track
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+				transition: transform 0.2s ease;
+			}
+
+			// Adds animation effect on hover
+			&:hover::-webkit-slider-thumb {
+				transform: scale(1.1);
+			}
+
+			&:hover::-moz-range-thumb {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__progress {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__progress-step {
+		font-family: "SB Sans Text",sans-serif;
+		line-height: 16 / 21 * 1em;
+	}
+}
+
+.page {
+	&__profit {
+	}
+}
+
+.profit {
+	&__container {
+		padding: 15px 0 ;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $breakpoint-lg) {
+			flex-direction: column-reverse;
+			gap: 28px;
+		}
+	}
+
+	&__investment {
+		max-width: 466px;
+		max-height: 350px;
+		width: 100vw;
+		height: 100vh;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 44px 30px;
+		gap: 14px;
+
+		border-radius: 42px;
+		color: #FFFFFF;
+		background-color: $darkGrean;
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 338px;
+			max-height: 257px;
+			padding: 24px 33px;
+
+		}
+	}
+
+	&__investment-title {
+		font-family: "SB Sans Text",sans-serif;
+		font-weight: 400;
+		line-height: 16 / 21 * 1em;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 12px;
+		}
+	}
+
+	&__investment-amount {
+		margin-top: 12px;
+		margin-right: 24px;
+
+		font-size: 48px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 48 / 62 * 1em;
+
+		color: #21A038;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 36px;
+		}
+	}
+
+	&__bonus {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		max-width: 378px;
+		width: 100%;
+		max-height: 86px;
+		height: 100vh;
+
+		padding: 22px 23px;
+
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.1);
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 271px;
+			max-height: 62px;
+		}
+
+		&-text {
+			width: 161px;
+			font-family: "SB Sans Text",sans-serif;
+
+			@media (max-width: $breakpoint-sm) {
+				width: 119px;
+				font-size: 12px;
+			}
+		}
+
+		&-amount {
+			font-size: 36px;
+			font-family: "Abhaya Libre",serif;
+			font-weight: 700;
+			line-height: 36 / 40 * 1em;
+
+			color: #21a038;
+
+			@media (max-width: $breakpoint-sm) {
+				font-size: 27px;
+			}
+		}
+	}
+
+
+	&__button {
+		height: 53px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-family: "SB Sans Text",sans-serif;
+
+		background-color: #21a038;
+		border-radius: 10px;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 12px;
+			height: 48px;
+		}
+	}
+
+	&__calculators {
+		max-width: 638px;
+		width: 100vw;
+
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		@media (max-width: $breakpoint-lg) {
+			gap: 24px;
+		}
+
+
+		@media (max-width: $breakpoint-sm) {
+			max-width: 344px;
+		}
+	}
+
+	&__calculators-title {
+		text-align: center;
+		margin-bottom: 12px;
+
+		font-size: 36px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 36 / 47 * 1em;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 27px;
+		}
+	}
+
+	&__calculator {
+		max-width: 660px;
+		width: 100%;
+		max-height: 176px;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 9px;
+
+		padding: 35px 66px;
+
+		background-color: $superLightGrean;
+		border-radius: 65px;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 27px;
+			padding: 18px 33px;
+
+			max-height: 100px;
+			height: 100%;
+		}
+	}
+
+	&__sum {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__label {
+		font-size: 18px;
+		text-align: left;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+
+	&__input-value {
+		color: #21a038;
+		font-size: 18px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+	.investment__input-value{
+		color: #21a038;
+		font-size: 18px;
+		font-family: "Abhaya Libre",serif;
+		font-weight: 700;
+		line-height: 18 / 23 * 1em;
+	}
+
+	.profit {
+		padding: 55px 34px;
+		&__input {
+			width: 100%;
+			-webkit-appearance: none; // Removes default browser styles
+			background: transparent;
+			--percent: 0%; // Default value to show the initial track as gray
+
+			// Track styling for WebKit browsers (Chrome, Safari)
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				height: 5px;
+				border-radius: 5px;
+				background: linear-gradient(
+								to right,
+								#21a038 var(--percent),
+								#d3d3d3 var(--percent)
+				); // Green track up to the thumb, light grey beyond
+				box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5); // White shadow around track
+			}
+
+			// Track styling for Firefox
+			&::-moz-range-track {
+				width: 100%;
+				height: 5px;
+				border-radius: 5px;
+				background: linear-gradient(
+								to right,
+								#21a038 var(--percent),
+								#d3d3d3 var(--percent)
+				); // Similar gradient effect for Firefox
+				box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+			}
+
+			// Thumb styling
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 14px;
+				height: 14px;
+				background-color: #21a038; // Green thumb
+				border: 3px solid #ffffff; // White circle around the thumb
+				border-radius: 50%;
+				cursor: pointer;
+				margin-top: -5px;   // Centers the thumb vertically on the track
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); // Optional white shadow around the thumb
+				transition: transform 0.2s ease;
+			}
+
+			&::-moz-range-thumb {
+				width: 14px;
+				height: 14px;
+				background-color: #21a038;
+				border: 3px solid #ffffff;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-top: -5px; // Centers the thumb vertically on the track
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+				transition: transform 0.2s ease;
+			}
+
+			&:hover::-webkit-slider-thumb {
+				transform: scale(1.1);
+			}
+
+			&:hover::-moz-range-thumb {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__progress {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__progress-step {
+		font-family: "SB Sans Text",sans-serif;
+		line-height: 16 / 21 * 1em;
+		@media (max-width: $breakpoint-sm) {
+			display: none; // Скрываем все элементы по умолчанию
+			font-size: 12px;
+			&:first-child {
+				display: flex; // Показываем первый элемент
+			}
+
+			&:last-child {
+				display: flex; // Показываем последний элемент
+			}
+		}
+	}
+}
