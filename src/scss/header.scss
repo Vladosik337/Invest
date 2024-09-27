@@ -94,7 +94,7 @@ body.no-scroll {
 
   padding: 0;
 
-  z-index: 1001;
+  z-index: 100;
   cursor: pointer;
 
   border-radius: 10px;
@@ -144,8 +144,6 @@ body.no-scroll {
   opacity: 0;
 }
 
-
-
 @media (max-width: $breakpoint-lg) {
   .hamburger {
     display: block;
@@ -156,14 +154,16 @@ body.no-scroll {
     height: 100vh;
 
     position: fixed;
-    z-index: -1;
+    z-index: 1;
     top: -100%;
     left: 0;
+
+    opacity: 0;
 
     gap: 15px;
     flex-direction: column;
 
-    transition: top 0.3s;
+    transition: all 0.3s;
 
     background-color: #FFFFFF;
   }
@@ -180,6 +180,7 @@ body.no-scroll {
   .nav__menu.active {
     top: 82px;
     opacity: 1;
+    z-index: 5;
   }
 }
 
