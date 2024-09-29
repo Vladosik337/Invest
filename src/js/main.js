@@ -5,13 +5,4 @@ import '../js/count_anim.js'
 import '../js/slider.js'
 import '../js/calculator.js'
 
-// -----------------Dark Them-----------------
-
-// const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-// if(isDarkMode){
-//     document.querySelector("body").style.backgroundColor = '#2C3136';
-//     document.querySelector("body").style.color = '#fff';
-// }
-
-// ----------------------------------------
 

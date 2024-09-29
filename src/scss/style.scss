@@ -6,7 +6,6 @@ $lightGrean: #D8F1A0;
 $superLightGrean: #F6FBF7;
 
 // Break points
-
 $breakpoint-xs: 320px;   // Extra small devices (portrait phones)
 $breakpoint-sm: 576px;   // Small devices (landscape phones)
 $breakpoint-md: 768px;   // Medium devices (tablets)
@@ -22,7 +21,6 @@ $breakpoint-xxl: 1400px; // Extra extra large devices (larger desktops)
 @import "advantages";
 @import "profit";
 @import "footer";
-@import "animate.css";
 
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
